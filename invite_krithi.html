@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Surprise Journey</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background: #fff0f5; }
+    section { display: none; }
+    section.active { display: block; }
+    button { font-size: 20px; padding: 10px 20px; cursor: pointer; margin-top: 20px; }
+    .emoji { font-size: 50px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+
+  <!-- Page 1 -->
+  <section class="active" id="page1">
+    <h1>Hey you Charming beauty 😘✨</h1>
+    <p>Click below to see your surprise!</p>
+    <button onclick="nextPage(2)">Show Surprise 🎁</button>
+    <div class="emoji">💖🌸🥰🌟</div>
+  </section>
+
+  <!-- Page 2 -->
+  <section id="page2">
+    <h1>Do you like surprises? 🎉🤩</h1>
+    <button onclick="nextPage(3)">Reveal Surprise!</button>
+    <div class="emoji">🎁🎊🥳💫</div>
+  </section>
+
+  <!-- Page 3 -->
+  <section id="page3">
+    <h1>Here comes more fun! 😎🔥</h1>
+    <button onclick="nextPage(4)">Next Surprise!</button>
+    <div class="emoji">🌈💥💫✨</div>
+  </section>
+
+  <!-- Page 4 -->
+  <section id="page4">
+    <h1>Feeling excited? 😍🎶</h1>
+    <button onclick="nextPage(5)">Keep Going!</button>
+    <div class="emoji">💃🕺🎉🎵</div>
+  </section>
+
+  <!-- Page 5 -->
+  <section id="page5">
+    <h1>Last surprise! 🥳💖</h1>
+    <p>Hope you enjoyed this mini journey! 😘💫</p>
+    <div class="emoji">🎊🎁🌸✨🎉</div>
+    <button onclick="nextPage(1)">Start Over 🔄</button>
+  </section>
+
+<script>
+function nextPage(pageNum) {
+  document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+  document.getElementById('page' + pageNum).classList.add('active');
+}
+</script>
+
+</body>
+</html>
